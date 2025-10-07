@@ -67,17 +67,17 @@ class RateCalculator {
             allRates.push({ rate: currentRate, leverage, isCenter: false });
         }
         
-        // HTMLを生成（前の行と比較して変動をチェック）
+        // HTMLを生成（次の行と比較して変動をチェック）
         const html = allRates.map((item, index) => {
             let rowClass = '';
             
             if (item.isCenter) {
                 rowClass = ' class="table-success"'; // 中央行は緑色
-            } else if (index > 0) {
-                // 前の行のleverage値と比較
-                const previousLeverage = allRates[index - 1].leverage;
-                if (item.leverage !== previousLeverage) {
-                    rowClass = ' class="table-danger"'; // 変動した行は赤色
+            } else if (index < allRates.length - 1) {
+                // 次の行のleverage値と比較
+                const nextLeverage = allRates[index + 1].leverage;
+                if (item.leverage !== nextLeverage) {
+                    rowClass = ' class="table-danger"'; // 変化する行は赤色
                 }
             }
             
@@ -103,15 +103,15 @@ class RateCalculator {
             allRates.push({ rate, leverage });
         }
         
-        // HTMLを生成（前の行と比較して変動をチェック）
+        // HTMLを生成（次の行と比較して変動をチェック）
         const html = allRates.map((item, index) => {
             let rowClass = '';
             
-            if (index > 0) {
-                // 前の行のleverage値と比較
-                const previousLeverage = allRates[index - 1].leverage;
-                if (item.leverage !== previousLeverage) {
-                    rowClass = ' class="table-danger"'; // 変動した行は赤色
+            if (index < allRates.length - 1) {
+                // 次の行のleverage値と比較
+                const nextLeverage = allRates[index + 1].leverage;
+                if (item.leverage !== nextLeverage) {
+                    rowClass = ' class="table-danger"'; // 変化する行は赤色
                 }
             }
             
