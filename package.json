@@ -1,11 +1,11 @@
 {
   "name": "gaika-ex",
-  "version": "1.0.0",
+  "version": "2025.10.8",
   "description": "外貨exの必要証拠金を計算",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "tanjoin",
+  "license": "MIT"
 }
