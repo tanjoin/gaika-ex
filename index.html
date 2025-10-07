@@ -16,35 +16,36 @@
                 <h1>外貨exの必要証拠金を計算</h1>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-10 align-self-center">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 col-10">
                 <label for="rate" class="form-label">計算レート</label>
                 <div class="input-group">
                     <input type="number" class="form-control" id="rate" placeholder="150.000"
                         aria-describedby="rate-button" aria-label="レート">
-                    <button class="btn btn-outline-secondary" type="button" id="rate-button">計算</button>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center mt-3">
-            <div class="col-10  align-self-center">
+        <div class="row justify-content-center align-items-center mt-3">
+            <div class="col-md-6 col-10">
                 <label for="need" class="form-label">必要証拠金</label>
-                <input  class="form-control" type="number" disabled class="form-control-plaintext" id="need">
+                <input class="form-control" type="number" disabled class="form-control-plaintext" id="need">
             </div>
         </div>
-        <div class="row align-items-center mt-3">
-            <h2>必要証拠金一覧</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">レート</th>
-                        <th scope="col">必要証拠金</th>
-                    </tr>
-                </thead>
-                <tbody id="rate-list">
+        <div class="row justify-content-center align-items-center mt-3">
+            <div class="col-md-8 col-12">
+                <h2 class="text-center">必要証拠金一覧</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">レート</th>
+                            <th scope="col">必要証拠金</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rate-list">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
